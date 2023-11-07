@@ -68,7 +68,6 @@ namespace Nop.Web.Areas.Admin.Models.Customers
         [NopResourceDisplayName("Admin.Customers.Customers.Fields.Gender")]
         public string Gender { get; set; }
 
-        public bool ZoholdEnabled { get; set; }
         [NopResourceDisplayName("Admin.Customers.Customers.Fields.Zohold")]
         public string Zohold { get; set; }
 

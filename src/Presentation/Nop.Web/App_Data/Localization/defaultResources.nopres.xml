@@ -11769,6 +11769,9 @@
   <LocaleResource Name="Admin.Customers.Customers.Fields.Zohold">
     <Value>Zohold</Value>
   </LocaleResource>
+  <LocaleResource Name="Admin.Customers.Customers.Fields.Zohold.Hint">
+    <Value>Actually I don't know what is it.</Value>
+  </LocaleResource>
   <LocaleResource Name="Admin.Customers.Customers.Fields.LastName">
     <Value>Last name</Value>
   </LocaleResource>

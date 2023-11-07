@@ -30,6 +30,11 @@ namespace Nop.Core.Domain.Customers
         public string Email { get; set; }
 
         /// <summary>
+        /// Gets or sets the zohold
+        /// </summary>
+        public string Zohold { get; set; }
+
+        /// <summary>
         /// Gets or sets the first name
         /// </summary>
         public string FirstName { get; set; }
@@ -255,7 +260,7 @@ namespace Nop.Core.Domain.Customers
         /// </summary>
         public TaxDisplayType? TaxDisplayType
         {
-            get => TaxDisplayTypeId.HasValue ?(TaxDisplayType)TaxDisplayTypeId : null;
+            get => TaxDisplayTypeId.HasValue ? (TaxDisplayType)TaxDisplayTypeId : null;
             set => TaxDisplayTypeId = value.HasValue ? (int)value : null;
         }
 

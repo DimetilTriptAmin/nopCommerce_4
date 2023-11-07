@@ -643,6 +643,8 @@ namespace Nop.Web.Areas.Admin.Controllers
                     if (_customerSettings.FaxEnabled)
                         customer.Fax = model.Fax;
 
+                    customer.Zohold = model.Zohold;
+
                     //custom customer attributes
                     customer.CustomCustomerAttributesXML = customerAttributesXml;
 
@@ -1074,7 +1076,7 @@ namespace Nop.Web.Areas.Admin.Controllers
                     throw new NopException(await _localizationService.GetResourceAsync("PrivateMessages.SubjectCannotBeEmpty"));
                 if (string.IsNullOrWhiteSpace(model.SendPm.Message))
                     throw new NopException(await _localizationService.GetResourceAsync("PrivateMessages.MessageCannotBeEmpty"));
-                
+
                 var store = await _storeContext.GetCurrentStoreAsync();
 
                 var privateMessage = new PrivateMessage
@@ -1192,7 +1194,7 @@ namespace Nop.Web.Areas.Admin.Controllers
                 ?? throw new ArgumentException("No customer found with the specified id", nameof(customerId));
 
             //try to get an address with the specified id
-            var address = await _customerService.GetCustomerAddressAsync(customer.Id, id);            
+            var address = await _customerService.GetCustomerAddressAsync(customer.Id, id);
 
             if (address == null)
                 return Content("No address found with the specified id");
